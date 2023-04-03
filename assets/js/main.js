@@ -91,40 +91,40 @@
   /**
    * Mobile nav toggle
    */
-  // on('click', '.mobile-nav-toggle', function(e) {
-  //   select('body').classList.toggle('mobile-nav-active')
-  //   this.classList.toggle('bi-list')
-  //   this.classList.toggle('bi-x')
-  // })
+  on('click', '.mobile-nav-toggle', function(e) {
+    select('body').classList.toggle('mobile-nav-active')
+    this.classList.toggle('bi-list')
+    this.classList.toggle('bi-x')
+  })
 
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  // on('click', '.scrollto', function(e) {
-  //   if (select(this.hash)) {
-  //     e.preventDefault()
+  on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
+      e.preventDefault()
 
-  //     let body = select('body')
-  //     if (body.classList.contains('mobile-nav-active')) {
-  //       body.classList.remove('mobile-nav-active')
-  //       let navbarToggle = select('.mobile-nav-toggle')
-  //       navbarToggle.classList.toggle('bi-list')
-  //       navbarToggle.classList.toggle('bi-x')
-  //     }
-  //     scrollto(this.hash)
-  //   }
-  // }, true)
+      let body = select('body')
+      if (body.classList.contains('mobile-nav-active')) {
+        body.classList.remove('mobile-nav-active')
+        let navbarToggle = select('.mobile-nav-toggle')
+        navbarToggle.classList.toggle('bi-list')
+        navbarToggle.classList.toggle('bi-x')
+      }
+      scrollto(this.hash)
+    }
+  }, true)
 
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  // window.addEventListener('load', () => {
-  //   if (window.location.hash) {
-  //     if (select(window.location.hash)) {
-  //       scrollto(window.location.hash)
-  //     }
-  //   }
-  // });
+  window.addEventListener('load', () => {
+    if (window.location.hash) {
+      if (select(window.location.hash)) {
+        scrollto(window.location.hash)
+      }
+    }
+  });
 
   /**
    * Hero type effect
@@ -162,32 +162,32 @@
   /**
    * Porfolio isotope and filter
    */
-  // window.addEventListener('load', () => {
-  //   let portfolioContainer = select('.portfolio-container');
-  //   if (portfolioContainer) {
-  //     let portfolioIsotope = new Isotope(portfolioContainer, {
-  //       itemSelector: '.portfolio-item'
-  //     });
+  window.addEventListener('load', () => {
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+      });
 
-  //     let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select('#portfolio-flters li', true);
 
-  //     on('click', '#portfolio-flters li', function(e) {
-  //       e.preventDefault();
-  //       portfolioFilters.forEach(function(el) {
-  //         el.classList.remove('filter-active');
-  //       });
-  //       this.classList.add('filter-active');
+      on('click', '#portfolio-flters li', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
 
-  //       portfolioIsotope.arrange({
-  //         filter: this.getAttribute('data-filter')
-  //       });
-  //       portfolioIsotope.on('arrangeComplete', function() {
-  //         AOS.refresh()
-  //       });
-  //     }, true);
-  //   }
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
 
-  // });
+  });
 
   /**
    * Initiate portfolio lightbox 
@@ -245,14 +245,14 @@
   /**
    * Animation on scroll
    */
-  // window.addEventListener('load', () => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     easing: 'ease-in-out',
-  //     once: true,
-  //     mirror: false
-  //   })
-  // });
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  });
 
   /**
    * Initiate Pure Counter 
